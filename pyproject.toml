@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "yc-cli"
+version = "0.1.0"
+description = "Query the Y Combinator company directory from the command line"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "httpx>=0.24",
+]
+
+[project.scripts]
+yc = "yc_cli.cli:main"
